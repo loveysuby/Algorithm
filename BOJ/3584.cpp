@@ -3,8 +3,8 @@
 #include <vector>
 using namespace std;
 
-vector<vector<int>> vec;
 vector<int> parent, depth;
+vector<vector<int>> vec;
 
 int iter, NodeCount;
 
