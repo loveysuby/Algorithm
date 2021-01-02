@@ -13,6 +13,5 @@ int main()
         day += daysAtMonth[i];
     //day % 7 의 value == 일요일(0) 부터 시작되는 string 배열의 index
     cout << daysOnWeek[day % 7];
-
     return 0;
 }
