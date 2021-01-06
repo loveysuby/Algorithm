@@ -18,6 +18,17 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
 
-    int num, temp;
-    cin >> num;
+    int count, temp;
+    cin >> count;
+    for (int i = 0; i < count; i++)
+    {
+        cin >> temp;
+        if (temp == 0)
+            cout << "1 0" << '\n';
+        else
+        {
+            cout << fibo(temp - 1) << ' ' << fibo(temp) << '\n';
+        }
+    }
+    return 0;
 }
