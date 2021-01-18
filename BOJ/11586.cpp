@@ -11,6 +11,7 @@ int main()
 
     int size;
     cin >> size;
+
     cin.ignore();
     vector<string> mirrorStack;
 
@@ -28,7 +29,7 @@ int main()
     case 1:
         for (int i = 0; i < size; i++)
             cout << mirrorStack[i] << '\n';
-        break;
+        return 0;
     case 2:
         for (int i = 0; i < size; i++)
         {
@@ -36,10 +37,10 @@ int main()
                 cout << mirrorStack[i][j];
             cout << '\n';
         }
-        break;
+        return 0;
     case 3:
         for (int i = size - 1; i >= 0; i--)
             cout << mirrorStack[i] << '\n';
-        break;
+        return 0;
     }
 }
