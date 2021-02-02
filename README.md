@@ -1,3 +1,3 @@
 # Algorithm
 
-PS daily accumulation 🧐💻🥺
+PS daily accumulation 
