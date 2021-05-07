@@ -1,5 +1,5 @@
 //Header
-#include <iostream>
+#include <bits/stdc++.h>
 //Define
 using namespace std;
 
