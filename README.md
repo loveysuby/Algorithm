@@ -2,7 +2,10 @@
 
 PS daily accumulation  
 
-![main](image/renoir.jpg)
+<p align="center"><img src="image/renoir.jpg" width="140%"></p>  
+<center><span style="color:gray">*Le déjeuner des canotiers, 	Pierre-Auguste Renoir, 1881*</span></center>
+
+
 ### Solving log
 
 1. 2020.12.27~ First solving
