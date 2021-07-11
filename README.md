@@ -1,5 +1,7 @@
 # PS daily accumulation 🛸 
 
+[![Solved.ac 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=loveysuby)](https://solved.ac/loveysuby)
+
 # [START!](https://solved.ac/search?query=tier%3As2..g4+solved%3A5000..&sort=random&direction=asc&page=1)
 Steady project of studying algorithm based on [BOJ](https://acmicpc.net).
 
