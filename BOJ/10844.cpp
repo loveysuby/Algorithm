@@ -29,25 +29,27 @@ sum = (N,0) ~ (N,9);
 
 int main(void)
 {
-	for(int i=1; i<=9;i++)
-		cache[1][i] =1;
-	
-	cin>>N;
-	
-	for(int i =2;i<=N;i++){
-		for(int j=0;j<=9;j++){
-			if(j==0)
-				cache[i][j] = cache[i-1][j+1];
-			else if(j==9)
-				cache[i][j] = cache[i-1][j-1];
-			else
-				cache[i][j] = (cache[i-1][j+1] + cache[i-1][j-1]) % billion;
-		}
-	}
-	for(int i=0;i<=9;i++)
-		result += cache[N][i];
-	
-	cout<< result % billion <<'\n';
-	
-	return 0;	
+    for (int i = 1; i <= 9; i++)
+        cache[1][i] = 1;
+
+    cin >> N;
+
+    for (int i = 2; i <= N; i++)
+    {
+        for (int j = 0; j <= 9; j++)
+        {
+            if (j == 0)
+                cache[i][j] = cache[i - 1][j + 1];
+            else if (j == 9)
+                cache[i][j] = cache[i - 1][j - 1];
+            else
+                cache[i][j] = (cache[i - 1][j + 1] + cache[i - 1][j - 1]) % billion;
+        }
+    }
+    for (int i = 0; i <= 9; i++)
+        result += cache[N][i];
+
+    cout << result % billion << '\n';
+
+    return 0;
 }
