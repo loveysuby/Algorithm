@@ -23,7 +23,7 @@ int main()
 	}
 	
 	for(int i = 0; i<n;i++){
-		length[i]=1;		
+		length[i]=1;
 		//arr[j]<arr[i](앞의 수보다 더 큰 수 발견한 경우)->증가수열이므로 length++
 		for(int j=0;j<i;j++){
 			if(arr[j]<arr[i])
