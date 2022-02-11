@@ -5,11 +5,11 @@ vector<int> v;
 void comp(int idx,int cnt){
 	if(cnt == M){
 		for(int i = 0; i<M;i++)
-			cout<<v[i]+1<<' ';
+			cout<<v[i]<<' ';
 		cout<<'\n';
 		return;
 	}
-	for(int i = idx; i<N; i++){
+	for(int i = idx; i<=N; i++){
 		v.push_back(i);
 		comp(i+1,cnt+1);
 		v.pop_back();
@@ -19,6 +19,6 @@ int main()
 {
     ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 	cin>>N>>M;
-	comp(0,0);
+	comp(1,0);
     return 0;
 }
