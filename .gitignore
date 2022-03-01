@@ -11,3 +11,4 @@ temprecord.md
 goorm.manifest
 /.vs
 /.vscode
+*.out
