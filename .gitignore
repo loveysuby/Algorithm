@@ -9,3 +9,5 @@ Template.cpp
 reference.md
 temprecord.md
 goorm.manifest
+/.vs
+/.vscode
