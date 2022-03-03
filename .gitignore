@@ -8,7 +8,13 @@ testboard2.cpp
 Template.cpp
 reference.md
 temprecord.md
+*.out
+# vscode debug setting
 goorm.manifest
 /.vs
-/.vscode
-*.out
+.vscode/
+desktop.ini
+# binary c++ test file ignore
+*
+!/**/
+!*.*
