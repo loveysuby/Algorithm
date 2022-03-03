@@ -1,8 +1,16 @@
+# binary c++ test file
+*
+!/**/
+!*.*
 *.exe
 *.dll
 *.o
+
+# library file 
 *.class
 *.log
+
+#private file
 testboard.cpp
 testboard2.cpp
 Template.cpp
@@ -11,10 +19,6 @@ temprecord.md
 *.out
 # vscode debug setting
 goorm.manifest
-/.vs
+.vs/
 .vscode/
 desktop.ini
-# binary c++ test file ignore
-*
-!/**/
-!*.*
