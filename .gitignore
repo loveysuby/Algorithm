@@ -1,11 +1,10 @@
 # binary c++ test file
-*
 !/**/
 !*.*
 *.exe
 *.dll
 *.o
-
+*
 # library file 
 *.class
 *.log
