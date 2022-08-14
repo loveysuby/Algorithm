@@ -2,8 +2,7 @@
 using namespace std;
 
 int N;
-
-void recursion(int D) {
+void recur(int D) {
     for (int i = 0; i < D; i++) cout << "____";
     cout << "\"재귀함수가 뭔가요?\"\n";
 
@@ -22,8 +21,8 @@ void recursion(int D) {
     for (int i = 0; i < D; i++) cout << "____";
     cout << "그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어.\"\n";
 
-    recursion(D + 1);
-        
+    recur(D + 1);
+
     for (int i = 0; i < D; i++) cout << "____";
     cout << "라고 답변하였지.\n";
 }
@@ -32,6 +31,6 @@ int main() {
     ios::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
     cin >> N;
     cout << "어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.\n";
-    recursion(0);
+    recur(0);
     return 0;
 }
