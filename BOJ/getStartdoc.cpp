@@ -14,8 +14,7 @@ using namespace std;
 
 5. 클리어할 때마다 push 잊지 않기 !
 */
-int main(void){
-	cout<<"test"<<'\n';
-	return 0;
-	
+int main(void) {
+    cout << "test" << '\n';
+    return 0;
 }
