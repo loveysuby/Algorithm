@@ -1,29 +1,46 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define fastio ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-vector<double> v;
-int N, cnt[8001];
-double mode, avg = 0;
-int main(){
-	fastio;
-	cin>>N;
-	for(int i=0;i<N;i++) {
-		int tmp; cin>>tmp;
-		v.push_back(tmp);
-		cnt[tmp+4000]++;
-		avg += tmp;
-	}
-	sort(v.begin(),v.end());
-	int T=0, tmode = *max_element(cnt, cnt+8001);
-	for(int i=0;i<8001;i++){
-		if(T==2) break;
-		if(cnt[i] == tmode) {
-			mode = i;
-			T++;
-		}
-	}
-	cout<<round((double)(avg / N))<<'\n';
-	cout<<v[N/2]<<'\n';
-	cout<<mode-4000<<'\n';
-	cout<<v.back()-v.front()<<'\n';
+
+int N, mostCnt = -8999, mostNum, sum = 0;
+int cnt[8002];
+vector<int> v;
+bool flag = false;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    cin >> N;
+
+    for (int i = 0; i < N; i++) {
+        int tmp;
+        cin >> tmp;
+        v.push_back(tmp);
+        cnt[tmp + 4000]++;
+        sum += tmp;
+    }
+
+    sort(v.begin(), v.end());
+
+    for (int i = 0; i < 8001; i++) {
+        if (cnt[i] == 0)
+            continue;
+        if (cnt[i] == mostCnt && flag) {
+            mostNum = i - 4000;
+            flag = false;
+        }
+        if (cnt[i] > mostCnt) {
+            mostCnt = cnt[i];
+            mostNum = i - 4000;
+            flag = true;
+        }
+    }
+
+    int avg = round((double)sum / N);
+    if (avg == -0) avg = 0;
+
+    cout << avg << '\n';
+    cout << v[N / 2] << '\n';
+    cout << mostNum << '\n';
+    cout << v.back() - v.front() << '\n';
+
+    return 0;
 }
