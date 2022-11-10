@@ -1,41 +1,27 @@
-//Header
 #include <bits/stdc++.h>
-//Define
 using namespace std;
+#define MAX 123456 * 2
 
-//Global elements
-bool chk[246913];
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    bool isPrime[MAX + 1];
+    fill_n(isPrime + 2, MAX + 1, true);
+    for (int i = 4; i <= MAX; i += 2)
+        isPrime[i] = false;
+    for (int i = 3; i <= sqrt(MAX); i += 2) {
+        if (!isPrime[i]) continue;
+        for (int j = i * i; j <= MAX; j += i * 2)
+            isPrime[j] = false;
+    }
+    int N;
+    while (1) {
+        cin >> N;
+        if (N == 0) break;
+        int R = 0;
+        for (int i = N + 1; i <= N * 2; i++)
+            if (isPrime[i]) R++;
+        cout << R << '\n';
+    }
 
-//Function
-
-
-//Driver
-int main()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-	cout.tie(NULL);
-	
-	int n, cnt; 
-	while(true){
-		cin>>n;	
-		if(n==0) break;
-		
-		cnt = 0;
-		for(int i =2; i<=n*2 ; i++)
-			chk[i] = true;
-		for(int i =2;i<=sqrt(n*2);i++){
-			if(chk[i]){
-				for(int j = i * 2 ; j<= n*2; j += i){
-					if(chk[j])
-						chk[j] = false;
-				}
-			}
-		}
-		for(int i = n+1;i<= n*2;i++)
-			if(chk[i]) cnt++;
-		
-		cout<<cnt<<'\n';
-	}
     return 0;
 }
