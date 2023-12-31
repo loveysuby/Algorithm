@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define fastio ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
-#define MAX 1e9
+
 struct Point
 {
     int x, y, id;
@@ -51,7 +50,7 @@ int main()
     }
 
     solve();
-    int res = MAX, count = 0;
+    int res = 1e9, count = 0;
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < M; j++)
