@@ -6,17 +6,17 @@ using namespace std;
 int M, N;
 vector<vector<int>> map;
 vector<vector<int>> dp;
-
+int dx[4] = {1, -1, 0, 0}, dy[4] = {0, 0, 1, -1};
 int dfs(int x, int y) {
   if (x == M - 1 && y == N - 1) return 1;
   if (dp[x][y] != -1) return dp[x][y];
 
   dp[x][y] = 0;
-  if (x > 0 && map[x][y] > map[x - 1][y]) dp[x][y] += dfs(x - 1, y);
-  if (x < M - 1 && map[x][y] > map[x + 1][y]) dp[x][y] += dfs(x + 1, y);
-  if (y > 0 && map[x][y] > map[x][y - 1]) dp[x][y] += dfs(x, y - 1);
-  if (y < N - 1 && map[x][y] > map[x][y + 1]) dp[x][y] += dfs(x, y + 1);
-
+  for (int i = 0; i < 4; i++) {
+    int nx = x + dx[i], ny = y + dy[i];
+    if (nx < 0 || nx >= M || ny < 0 || ny >= N) continue;
+    if (map[nx][ny] < map[x][y]) dp[x][y] += dfs(nx, ny);
+  }
   return dp[x][y];
 }
 
